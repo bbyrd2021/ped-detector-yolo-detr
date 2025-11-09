@@ -21,8 +21,8 @@ dependencies:
   - tqdm
   - ipywidgets
   - pip:
-      - ultralytics==8.3.0
+      - ultralytics
       - datasets
-      - paddledet==2.6
+      - paddledet
       - paddlepaddle-gpu==2.6.0
       - pyarrow
