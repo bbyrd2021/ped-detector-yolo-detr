@@ -24,10 +24,22 @@ caltech-pedestrian-IITP-1/
 *.tar
 *.tar.gz
 
-# === RUN OUTPUTS (keep CSVs & figures) ===
+# === RUN OUTPUTS (keep CSVs & figures, exclude test images) ===
+# Exclude all runs by default
 runs/
+
+# Re-allow runs folder itself for structure
+!runs/
+!runs/**/
+
+# Exclude YOLO test outputs
+runs/yolo_test/
+
+# Keep CSV summaries from experiments
 !runs/**/csv/
 !runs/**/csv/*.csv
+
+# Keep visualizations
 !reports/figures/
 !reports/figures/*.png
 !reports/figures/*.jpg
