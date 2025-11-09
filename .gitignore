@@ -1,12 +1,49 @@
+# === PYTHON & NOTEBOOK ARTIFACTS ===
 __pycache__/
-*.pt
-*.zip
-data/
-runs/
-logs/
-derived/
-*.ipynb_checkpoints
-*.csv
-*.parquet
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+*.log
+*.tmp
+*.bak
 
+# === MODEL WEIGHTS ===
+*.pt
+*.onnx
+*.engine
+*.pth
+*.ckpt
+
+# === DATASETS (exclude raw + derived images) ===
+data/
+datasets/
+derived/
+caltech-pedestrian-IITP-1/
+*.zip
+*.tar
+*.tar.gz
+
+# === RUN OUTPUTS (keep CSVs & figures) ===
+runs/
+!runs/**/csv/
+!runs/**/csv/*.csv
+!reports/figures/
+!reports/figures/*.png
+!reports/figures/*.jpg
+!reports/figures/*.jpeg
+!reports/figures/*.pdf
+
+# === ENVIRONMENTS ===
+.env
+*.yaml
+*.yml
 .DS_Store
+
+# === MISCELLANEOUS ===
+.vscode/
+.idea/
+*.iml
+
+
+
