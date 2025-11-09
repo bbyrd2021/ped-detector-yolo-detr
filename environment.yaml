@@ -1,0 +1,28 @@
+name: ped-detector
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=12.1
+  - pyspark
+  - jupyterlab
+  - notebook
+  - tqdm
+  - ipywidgets
+  - pip:
+      - ultralytics==8.3.0
+      - datasets
+      - paddledet==2.6
+      - paddlepaddle-gpu==2.6.0
+      - pyarrow
