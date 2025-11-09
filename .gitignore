@@ -9,3 +9,4 @@ derived/
 *.csv
 *.parquet
 
+.DS_Store
