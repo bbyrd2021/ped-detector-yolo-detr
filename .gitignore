@@ -1,0 +1,11 @@
+__pycache__/
+*.pt
+*.zip
+data/
+runs/
+logs/
+derived/
+*.ipynb_checkpoints
+*.csv
+*.parquet
+
