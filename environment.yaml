@@ -1,37 +1,11 @@
-name: ped-detector
-channels:
-  - pytorch
-  - nvidia
-  - conda-forge
-  - defaults
-
+name: yolo
 dependencies:
   - python=3.10
   - pip
-  - pytorch
-  - torchvision
-  - torchaudio
-  - pytorch-cuda=12.1
-  - numpy
-  - pandas
-  - matplotlib
-  - seaborn
-  - scipy
-  - pyarrow
-  - jupyterlab
-  - notebook
-  - scikit-learn
-  - tqdm
   - pip:
-      - ultralytics==8.3.0
-      - paddledet==2.6.0
-      - paddlepaddle-gpu==2.6.0
-      - datasets
-      - opencv-python==4.6.0.66
-      - pycocotools
-      - visualdl>=2.2.0
-      - shapely
-      - terminaltables
-      - lap
-      - motmetrics
-      - typeguard
+      - ultralytics
+      - torch
+      - torchvision
+      - opencv-python
+      - matplotlib
+      - tqdm
