@@ -1,21 +1,27 @@
 # === PYTHON & NOTEBOOK ARTIFACTS ===
 __pycache__/
+.ipynb_checkpoints/
+.ipynb_checkpoints/
 *.pyc
 *.pyo
 *.pyd
-.ipynb_checkpoints/
 *.log
 *.tmp
 *.bak
+.DS_Store
 
 # === MODEL WEIGHTS ===
 *.pt
 *.onnx
 *.engine
 *.pth
+*.pth
+*.pth
 *.ckpt
+*.ckpt
+*.pt
 
-# === DATASETS (exclude raw + derived images) ===
+# === DATASETS (exclude archives) ===
 data/
 datasets/
 derived/
@@ -23,39 +29,41 @@ caltech-pedestrian-IITP-1/
 *.zip
 *.tar
 *.tar.gz
+*.tgz
 
-# === RUN OUTPUTS (keep CSVs & figures, exclude test images) ===
-# Exclude all runs by default
-runs/
-
-# Re-allow runs folder itself for structure
-!runs/
-!runs/**/
-
-# Exclude YOLO test outputs
-runs/yolo_test/
-
-# Keep CSV summaries from experiments
-!runs/**/csv/
+# === RUN OUTPUTS (keep folder structure + CSVs, block images) ===
+runs/*
 !runs/**/csv/*.csv
-
-# Keep visualizations
-!reports/figures/
+!runs/**/csv/
 !reports/figures/*.png
 !reports/figures/*.jpg
-!reports/figures/*.jpeg
+!reports/figures/**/*.pdf
+
+# But ignore all test images produced during training
+runs/**/*.jpg
+runs/**/*.jpeg
+runs/**/*.png
+runs/**/*.gif
+
+# Keep directories but not images inside them
+!runs/.gitkeep
+runs/**/.*
+!runs/**/.gitkeep
+!reports/figures/
 !reports/figures/*.pdf
+
+# === IDE & LOCAL DEV FILES ===
+.vscode/
+.idea/
+.idea/
+*.iml
+*.iml
 
 # === ENVIRONMENTS ===
 .env
 *.yaml
 *.yml
-.DS_Store
 
-# === MISCELLANEOUS ===
-.vscode/
-.idea/
-*.iml
 
 
 
